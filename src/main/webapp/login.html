@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CodePen - Responsive login form</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Syahrizaldev">
+<link rel='stylesheet'
+	href='https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<h3>{{message}}</h3>
+	<main class="main">
+		<div class="container">
+			<section class="wrapper">
+				<div class="heading">
+					<h1 data-i18n="title" class="text text-large">Sign In</h1>
+					<p class="text text-normal">
+						New user? <span><a href="#" class="text text-links">Create
+								an account</a></span>
+					</p>
+				</div>
+				<form name="signin" class="form">
+					<div class="input-control">
+						<label for="username" class="input-label" hidden>username
+							Address</label> <input type="username" ng-model="username"  name="username" id="username"
+							class="input-field" placeholder="username Address">
+					</div>
+					<div class="input-control">
+						<label for="password" class="input-label" hidden>Password</label>
+						<input type="password"  ng-model="password"  name="password" id="password"
+							class="input-field" placeholder="Password">
+					</div>
+					<div class="input-control">
+						<a href="#" class="text text-links">Forgot Password</a> <!-- <input
+							type="button" name="submit" ng-click="login(username, password);" class="input-submit" value="Sign In"
+							disabled> -->
+							<input type="button" value="Send" ng-click="login(username, password)" />
+					</div>
+				</form>
+			</section>
+		</div>
+	</main>
+</body>
+</html>

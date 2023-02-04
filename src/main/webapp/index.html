@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="mainApp">
+<head>
+<script src="js/angular.min.js"></script>
+<!-- <script src="js/angular-route.min.js"></script> -->
+<script src="js/translator.js"></script>
+<style type="text/css">
+	#logo{
+	width: 150px;
+	height: 100px;
+}
+</style>
+</head>
+<body> 
+	<div class="row">
+		<!--  <img id="logo" alt="logo" src="img/logo.png">   -->
+ <a href="#/first">First</a>
+<a href="#/login">Login</a>
+ <label> <input type="radio" name="lang" value="ar" /> Arabic </label>
+        <label> <input type="radio" name="lang" value="en" /> English </label>
+     
+	</div>
+	
+
+<div class="container" ng-view></div>
+<script src="js/app.js"></script>
+<script src="js/FirstController.js"></script>
+<script src="js/LoginController.js"></script>
+</body>
+</html>
