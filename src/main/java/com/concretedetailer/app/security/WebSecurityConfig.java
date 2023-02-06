@@ -11,7 +11,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 /**
  * Spring Web security configuration class
  *
- * @author Hendi Santika
+ * @author Francis
  *
  */
 @Configurable
@@ -25,10 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 
-		web.ignoring()
-				// ignoring the "/", "/index.html", "/app/**", "/register",
-				// "/favicon.ico"
-				.antMatchers("/", "/index.html", "/app/**", "/register", "/authenticate", "/favicon.ico");
+		web.ignoring().antMatchers("/", "/index.html", "/app/**", "/register", "/authenticate", "/favicon.ico");
 	}
 
 	// This method is used for override HttpSecurity of the web Application.

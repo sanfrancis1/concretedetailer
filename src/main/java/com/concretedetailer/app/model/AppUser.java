@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Model class for application user
  *
- * @author Hendi Santika
+ * @author Francis
  *
  */
 @Entity

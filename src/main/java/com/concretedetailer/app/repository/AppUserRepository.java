@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.concretedetailer.app.model.AppUser;
 
 /**
- * @author Hendi Santika
+ * @author Francis
  *
  */
 public interface AppUserRepository extends JpaRepository<AppUser, Long> {

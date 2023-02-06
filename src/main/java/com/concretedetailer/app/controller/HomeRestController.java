@@ -21,7 +21,7 @@ import java.util.*;
 /**
  * All web services in this controller will be available for all the users
  *
- * @author Hendi Santika
+ * @author Francis
  */
 @RestController
 public class HomeRestController {

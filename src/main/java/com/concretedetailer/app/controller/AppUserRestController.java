@@ -21,7 +21,7 @@ import java.util.List;
  * Rest controller for authentication and user details. All the web services of
  * this rest controller will be only accessible for ADMIN users only
  *
- * @author Hendi Santika
+ * @author Francis
  */
 @RestController
 @RequestMapping(value = "/api")
@@ -34,7 +34,7 @@ public class AppUserRestController {
      *
      * @return list of all AppUser
      */
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public List<AppUser> users() {
         return appUserRepository.findAll();
@@ -46,7 +46,7 @@ public class AppUserRestController {
      * @param id appUser ID
      * @return appUser
      */
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    
     @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
     public ResponseEntity<AppUser> userById(@PathVariable Long id) {
         AppUser appUser = appUserRepository.findById(id).get();
@@ -63,7 +63,6 @@ public class AppUserRestController {
      * @param id
      * @return
      */
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @RequestMapping(value = "/users/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<AppUser> deleteUser(@PathVariable Long id) {
         AppUser appUser = appUserRepository.findById(id).get();
@@ -86,7 +85,6 @@ public class AppUserRestController {
      * @param appUser
      * @return
      */
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @RequestMapping(value = "/users", method = RequestMethod.POST)
     public ResponseEntity<AppUser> createUser(@RequestBody AppUser appUser) {
         if (appUserRepository.findOneByUsername(appUser.getUsername()) != null) {
